@@ -6,6 +6,9 @@ import java.util.Map;
 
 public class ResponseTransformer {
 
+    private ResponseTransformer() {
+    }
+
     /**
      * Transform a single domain entity to ApiResponse with a transformer.
      *

@@ -56,7 +56,6 @@ public class ValidationException extends RuntimeException {
             String field = violation.getPropertyPath().toString();
             String message = violation.getMessage();
 
-            // Add message to existing list if key exists
             errDetails.computeIfAbsent(field, k -> new ArrayList<>()).add(message);
         }
 
