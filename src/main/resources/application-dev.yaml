@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: assignment
+server:
+  port: 8080
+
+logging:
+  level:
+    root: ${LOG_LEVEL_ROOT:DEBUG}
+    com.typeb.assignment: ${LOG_LEVEL_APP:DEBUG}

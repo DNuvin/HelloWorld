@@ -12,9 +12,9 @@ class HelloWorldServiceTest {
 
     @Test
     void testSayHello() {
-        HelloMessage result = service.sayHello("nuvin");
+        HelloMessage result = service.sayHello("Alice");
         assertNotNull(result);
-        assertEquals("Hello Nuvin", result.getMessage());
+        assertEquals("Hello Alice", result.getMessage());
     }
 
 }

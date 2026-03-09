@@ -33,8 +33,8 @@ class HelloWorldControllerTest {
     @Test
     void testSayHello_Success() {
 
-        String name = "nuvin";
-        HelloMessage message = new HelloMessage("Hello Nuvin");
+        String name = "Alice";
+        HelloMessage message = new HelloMessage("Hello Alice");
 
         when(service.sayHello(name)).thenReturn(message);
 
@@ -43,8 +43,9 @@ class HelloWorldControllerTest {
         verify(validator).validate(any(HelloRequestDto.class));
         verify(service).sayHello(name);
 
+        assertNotNull(response.getBody());
         assertTrue(response.getBody().isSuccess());
-        assertEquals("Hello Nuvin", (response.getBody().getData()).get("message"));
+        assertEquals("Hello Alice", (response.getBody().getData()).get("message"));
     }
 
     @Test
@@ -94,7 +95,7 @@ class HelloWorldControllerTest {
     @Test
     void testSayHello_ServiceThrowsRuntimeException() {
 
-        String name = "nuvin";
+        String name = "Alice";
         when(service.sayHello(name)).thenThrow(new RuntimeException("Something went wrong"));
 
         RuntimeException ex = assertThrows(RuntimeException.class, () -> {
