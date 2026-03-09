@@ -6,5 +6,5 @@ server:
 
 logging:
   level:
-    root: ${LOG_LEVEL_ROOT:DEBUG}
+    root: ${LOG_LEVEL_ROOT:INFO}
     com.typeb.assignment: ${LOG_LEVEL_APP:DEBUG}

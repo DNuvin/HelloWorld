@@ -97,7 +97,14 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.5.11</version> <!-- match your Spring Boot version -->
+				<configuration>
+					<finalName>hello-world-app</finalName>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
