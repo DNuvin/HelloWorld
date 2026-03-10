@@ -180,7 +180,7 @@ README.md           → Documentation
 ## ✅ Request
 
 ```
-GET /hello-world?name=Nuvin
+GET /hello-world?name=Alice
 ```
 
 ## ✅ Success Response
